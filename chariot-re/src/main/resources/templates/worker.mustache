@@ -1,0 +1,39 @@
+<div class="card">
+	<div class="card-header">Worker</div>
+	<ul class="list-group">
+		{{#worker}}
+		<li class="list-group-item">
+			<span class="info-header"> Username: </span>
+			{{workerID}}
+		</li>
+		<li class="list-group-item">
+			<span class="info-header"> Password: </span>
+			{{password}}
+		</li>
+		<li class="list-group-item">
+			<span class="info-header"> Name: </span>
+			{{name}}
+		</li>
+		<li class="list-group-item">
+			<span class="info-header"> Surname: </span>
+			{{surname}}
+		</li>
+		<li class="list-group-item">
+			<span class="info-header"> Birth Date: </span>
+			{{birthDate}}
+		</li>
+		{{/worker}}
+		<li class="list-group-item">
+			<span class="info-header"> Has Skill: </span>
+			{{#skill}}
+				<a class="info-value-button" href="skill?id={{Id}}"> {{Id}} </a>
+			{{/skill}}
+		</li>
+		{{#worker}}
+		<li class="list-group-item">
+			<span class="info-header"> Health Data </span>
+			<a class="info-value-button" href="health_data?workerID={{workerID}}"> Download Health Data</a>
+		</li>
+		{{/worker}}
+	</ul>
+</div>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="classpath:de/dailab/jiactng/agentcore/conf/AgentNode.xml" />
+	<import resource="classpath:de/dailab/jiactng/agentcore/conf/Agent.xml" />
+	<import resource="classpath:GatewayConfig.xml" />
+	
+	<bean name="PMNode" parent="GatewayNode"  scope="prototype">
+		<property name="agents">
+			<list>
+				<ref bean="TaskDispatcherAgent" />
+<!--				<ref bean="PMAgent" />-->
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="TaskDispatcherAgent" parent="NonBlockingAgent">
+		<property name="agentBeans">
+			<list>
+				<ref bean="TaskDispatcherAgentBean" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="TaskDispatcherAgentBean" class="de.gtarc.server.agent.bean.TaskDispatcherAgent">
+		<property name="executionInterval" value="10000" />
+		<property name="logLevel" value="INFO"/>
+		<property name="mqttHostURL" value="tcp://130.149.232.235:1883" />
+		<property name="mqttUsername" value="plbwvpgf" />
+		<property name="mqttPassword" value="mJTPb6z12Bag"/>
+		<property name ="mqttClientId" value="TaskDispatcherAgent" />
+		<!-- KMS URL-->
+		<property name="kmsURL" value="http://chariot-km.dai-lab.de:8080/v1/"/>
+		<!-- Entity UUID -->
+		<property name ="entityId" value="9d0262ca-9cb4-451a-8a4d-677c725cdabd"/>
+	</bean>
+	
+<!--	<bean name="PMAgent" parent="SimpleAgent" scope="prototype">-->
+<!--		<property name="agentBeans">-->
+<!--			<list>-->
+<!--				<ref bean="PMAgentBean" />-->
+<!--			</list>-->
+<!--		</property>-->
+<!--	</bean>-->
+<!--	-->
+<!--	<bean name="PMAgentBean" class="de.gtarc.server.agent.bean.PredictiveMaintenanceAgentBean" scope="prototype">-->
+<!--		<property name="executionInterval" value="300000" />-->
+<!--	</bean>-->
+</beans>

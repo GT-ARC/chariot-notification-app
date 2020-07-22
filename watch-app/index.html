@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<title>Circular UI</title>
+	<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+	<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="lib/tau/wearable/theme/default/tau.circle.min.css">
+	<!-- load theme file for your application -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/patternlock.min.css">
+</head>
+<body>
+	<div class="ui-page ui-page-active" id="main">
+		
+	</div>
+
+	<div id="alert-popup" class="ui-popup">
+		<div class="ui-popup-content">
+			<p id="message"></p>
+		</div>
+		<div class="ui-popup-footer">
+			<button class="ui-btn" data-inline="true">OK</button>
+		</div>
+	</div>
+	<div id="feel-popup" class="ui-popup">
+		<div class="ui-popup-content">
+			<p> How do you feel</p>
+			<button id="health-feel-good" class="buttonCircleSmall">Good</button>
+			<button id="health-feel-bad" class="buttonCircleSmall">Bad</button>
+			<button id="health-feel-happy" class="buttonCircleSmall">Happy</button>
+			<button id="health-feel-stress" class="buttonCircleSmall">Stress</button>
+		</div>
+	</div>
+	<div id="work-popup" class="ui-popup">
+		<div class="ui-popup-content">
+			<p> What are you doing</p>
+			<button id="health-work-rest" class="buttonCircleSmall">Rest</button>
+			<button id="health-work-desktop" class="buttonCircleSmall">Desktop</button>
+			<button id="health-work-easy" class="buttonCircleSmall">Easy</button>
+			<button id="health-work-hard" class="buttonCircleSmall">Hard</button>
+		</div>
+	</div>
+	
+	<script src="lib/tau/wearable/js/tau.min.js" type="text/javascript" ></script>
+	<script src="lib/jquery.min.js" type="text/javascript"></script>
+	<script src="lib/patternlock.min.js" type="text/javascript"></script>
+	
+	<script src="js/userdata.js" type="text/javascript"></script>
+	<script src="js/notification.js" type="text/javascript" ></script>
+	<script src="js/healthDataMeasurement.js" type="text/javascript" ></script>
+	<script src="js/nfcHandler.js" type="text/javascript"></script>
+	<script src="js/jsonTemplates.js" type="text/javascript"></script>
+	<script src="js/connectivity.js" type="text/javascript"></script>
+	<script src="js/app.js" type="text/javascript"></script>
+	<script src="js/lowBatteryCheck.js" type ="text/javascript"></script>
+</body>
+</html>
+

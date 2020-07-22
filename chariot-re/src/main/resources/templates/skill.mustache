@@ -1,0 +1,25 @@
+<div class="card">
+	<div class="card-header">Skill</div>
+	<ul class="list-group">
+		{{#skill}}
+        <li class="list-group-item">
+            <span class="info-header"> Id: </span>
+            {{Id}}
+        </li>
+		<li class="list-group-item">
+			<span class="info-header"> Name: </span>
+			{{name}}
+		</li>
+		<li class="list-group-item">
+			<span class="info-header"> Description: </span>
+			{{desc}}
+		</li>
+		{{/skill}}
+		<li class="list-group-item">
+			<span class="info-header"> Owned by (workers): </span>
+			{{#worker}}
+				<a class="info-value-button" href="worker?workerID={{workerID}}"> {{workerID}} </a>
+			{{/worker}}
+		</li>
+	</ul>
+</div>

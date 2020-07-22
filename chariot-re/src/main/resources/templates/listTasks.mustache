@@ -1,0 +1,27 @@
+<table class="listtable">
+	<tr>
+		<th> ID </th>
+		<th> Name </th>
+		<th> Description </th>
+		<th> Status </th>
+		<th> Assigned To </th>
+		<th> Deadline </th>
+        <th> Remove</th>
+	</tr>
+	{{#task}}
+	<tr>
+		<td><a class="info-value-button" href="task?taskID={{taskID}}"> {{taskID}} </a></td>
+		<td>{{taskName}}</td>
+		<td>{{taskDesc}}</td>
+		<td>{{taskStatus}}</td>
+		<td><a class="info-value-button" href="worker?workerID={{assignedID}}">{{assignedID}}</a></td>
+		<td>{{taskDeadline}}</td>
+        <td><form action="/listtasks" method="post">
+            <input class="form-control" name="taskID" style="display: none" value="{{taskID}}"></input>
+            <button type="submit" class="btn btn-primary mb-2">Delete</button>
+        </form>
+        </td>
+
+	</tr>
+	{{/task}}
+</table>

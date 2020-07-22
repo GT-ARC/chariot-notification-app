@@ -1,0 +1,60 @@
+.listtable {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.listtable td, .listtable th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+.listtable tr:nth-child(even){background-color: #f2f2f2;}
+
+.listtable tr:hover {background-color: #ddd;}
+
+.listtable th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #4CAF50;
+	color: white;
+}
+
+#content {
+	width: 80%;
+	padding: 20px;
+	margin-left: 50px;
+	margin-top: 100px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+}
+
+.card {
+	margin: 5px;
+}
+
+.info-header {
+	font-weight: bold;
+}
+
+.info-value-button {
+	border: 1px solid #ddd;
+	border-radius: 5px; 
+	background: #00000004;
+	padding: 3px;
+	margin: 3px;
+}
+
+.error {
+	color: crimson; 
+}
+
+.success {
+	color: limegreen;
+}
+
+.form {
+	padding: 10px;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+}

@@ -1,0 +1,19 @@
+{{#error}}
+<div class="error">{{text}}</div>
+{{/error}}
+
+{{#success}}
+<div class="success">{{text}}</div>
+{{/success}}
+
+<form style="padding: 10px; border: 1px solid lightgray; border-radius: 10px;" action="/addskill" method="post">
+    <div class="form-group row">
+        <label class="col-sm-2"><strong>Skill Name</strong></label>
+        <input class="form-control col-sm-6" name="name" required>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2"><strong>Description</strong></label>
+        <input  class="form-control col-sm-6" name="desc" required>
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>

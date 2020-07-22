@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/Wearable" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="9IomjFPKL2.Wearable" package="9IomjFPKL2" required_version="2.3.2"/>
+    <content src="index.html"/>
+    <feature name="http://tizen.org/feature/screen.size.normal"/>
+    <icon src="chariot-logo-white-bg.png"/>
+    <name>Wearable</name>
+    <tizen:privilege name="http://tizen.org/privilege/power"/>
+    <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <tizen:privilege name="http://tizen.org/privilege/nfc.admin"/>
+    <tizen:privilege name="http://tizen.org/privilege/nfc.cardemulation"/>
+    <tizen:privilege name="http://tizen.org/privilege/nfc.common"/>
+    <tizen:privilege name="http://tizen.org/privilege/nfc.p2p"/>
+    <tizen:privilege name="http://tizen.org/privilege/nfc.tag"/>
+    <tizen:privilege name="http://tizen.org/privilege/notification"/>
+    <tizen:privilege name="http://tizen.org/privilege/healthinfo"/>
+    <tizen:profile name="wearable"/>
+    <tizen:setting background-support="enable" hwkey-event="enable"/>
+</widget>

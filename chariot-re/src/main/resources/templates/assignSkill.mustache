@@ -1,0 +1,29 @@
+{{#error}}
+<div class="error">{{text}}</div>
+{{/error}}
+
+{{#success}}
+<div class="success">{{text}}</div>
+{{/success}}
+
+
+<form action="/assignSkill" method="post">
+	{{#worker}}
+	<div class="form-group row">
+		<label class="col-sm-2"><strong>Worker: </strong></label>
+		<input class="form-control" name="workerID" style="display: none" value="{{workerID}}"></input>
+            <a class="info-value-button" href="worker?workerID={{workerID}}">{{workerID}}</a>
+	</div>
+	{{/worker}}
+	<div class="form-group row">
+		<label class="col-sm-2"><strong>Acquired Skills: </strong></label>
+		<ul class="list-group card form-control col-sm-6" style="overflow-y:scroll; height:250px;">
+			{{#skill}}
+			<li class="list-group-item">
+				<input type="checkbox" name="skill" value="{{Id}}"> <a href="skill?id={{Id}}">{{name}}</a></input>
+			</li>
+			{{/skill}}
+		</ul>
+	</div>
+	<button type="submit" class="btn btn-primary mb-2">Submit</button>		
+</form>
